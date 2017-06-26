@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "jsx-control-statements"
+  ],
+  "env": {
+    "jsx-control-statements/jsx-control-statements": true,
+    "browser": true,
+    "node": true
+  }
+}
