@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 require('babel-core/register');
+require('babel-polyfill');
+require('isomorphic-fetch');
 
 require('./src/server')((app) => {
   const host = app.get('host');
