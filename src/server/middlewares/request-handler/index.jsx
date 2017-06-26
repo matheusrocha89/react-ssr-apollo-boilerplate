@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import React from 'react';
 import { StaticRouter } from 'react-router';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -7,7 +9,7 @@ import mobile from 'is-mobile';
 import { createApolloClient, getNetworkInterface } from '../../../clients/apollo';
 import { isDevelopment } from '../../config';
 import App from '../../../components/app';
-import Html from '../../components/html';
+import Html from '../../../components/html';
 
 
 function getAssetsMap() {
@@ -61,4 +63,4 @@ function requestHandler(req, res) {
   });
 }
 
-export default requestHandler';
+export default requestHandler;
