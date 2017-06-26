@@ -22,5 +22,9 @@
     "webpack": "3.0.0",
     "webpack-dev-middleware": "1.11.0",
     "webpack-hot-middleware": "2.18.0"
+  },
+  "dependencies": {
+    "babel-core": "6.25.0",
+    "express": "4.15.3"
   }
 }
