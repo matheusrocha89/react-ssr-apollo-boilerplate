@@ -1,2 +1,2 @@
-# react-ssr-boilerplate
+# react-ssr-apollo-boilerplate
 A React with ssr, apollo graphql client and react router v4 boilerplate
