@@ -1,0 +1,9 @@
+{
+  "name": "react-ssr-apollo-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate for React with Apollo graphql, SSR and React Router v4",
+  "main": "index.js",
+  "repository": "git@github.com:matheusrocha89/react-ssr-apollo-boilerplate.git",
+  "author": "Matheus Cruz Rocha <matheus.rocha89@gmail.com>",
+  "license": "MIT"
+}
