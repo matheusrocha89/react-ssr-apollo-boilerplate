@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:matheusrocha89/react-ssr-apollo-boilerplate.git",
   "author": "Matheus Cruz Rocha <matheus.rocha89@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "3.0.0"
+  }
 }
