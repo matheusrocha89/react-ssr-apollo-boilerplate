@@ -6,6 +6,9 @@
   "repository": "git@github.com:matheusrocha89/react-ssr-apollo-boilerplate.git",
   "author": "Matheus Cruz Rocha <matheus.rocha89@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "devDependencies": {
     "babel-loader": "7.1.0",
     "babel-plugin-add-module-exports": "0.2.1",
