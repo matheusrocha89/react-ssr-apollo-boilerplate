@@ -20,6 +20,4 @@ Routes.defaultProps = {
   isMobile: false,
 };
 
-export default {
-  Routes,
-};
+export default Routes;
