@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 
 import {
@@ -12,7 +13,7 @@ const Routes = props => (
 );
 
 Routes.propTypes = {
-  isMobile: React.PropTypes.bool,
+  isMobile: PropTypes.bool,
 };
 
 Routes.defaultProps = {

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 function Html({ content, title, assetsMap, state }) {
@@ -27,10 +28,10 @@ function Html({ content, title, assetsMap, state }) {
 }
 
 Html.propTypes = {
-  content: React.PropTypes.string.isRequired,
-  state: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  assetsMap: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  title: React.PropTypes.string,
+  content: PropTypes.string.isRequired,
+  state: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  assetsMap: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  title: PropTypes.string,
 };
 
 Html.defaultProps = {
