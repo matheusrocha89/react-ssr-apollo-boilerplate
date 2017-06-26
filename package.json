@@ -40,6 +40,10 @@
     "express": "4.15.3",
     "isomorphic-fetch": "2.2.1",
     "node-neat": "2.0.0-beta.0",
-    "react-apollo": "1.4.2"
+    "prop-types": "15.5.10",
+    "react": "15.6.1",
+    "react-apollo": "1.4.2",
+    "react-router": "4.1.1",
+    "react-router-dom": "4.1.1"
   }
 }
