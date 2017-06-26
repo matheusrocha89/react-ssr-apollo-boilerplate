@@ -5,7 +5,7 @@
     "js": "node"
   },
   "ext": "js jsx",
-  "watch": ["./src/server"],
+  "watch": ["./src/server", "./src/routes", "./src/pages"],
   "env": {
     "NODE_ENV": "development"
   }
