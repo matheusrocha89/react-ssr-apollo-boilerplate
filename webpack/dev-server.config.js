@@ -6,7 +6,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';
 import express from 'express';
 
-import devConfig from './dev.config';
+import devConfig from './client-dev.config';
 
 
 export default (app) => {
