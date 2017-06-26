@@ -6,6 +6,7 @@ import {
   NODE_ENV,
   APP_HOST,
   APP_PORT,
+  APP_NAME,
 } from './config';
 
 
@@ -16,6 +17,7 @@ export default (callback) => {
   app.set('env', NODE_ENV);
   app.set('host', APP_HOST);
   app.set('port', APP_PORT);
+  app.set('title', APP_NAME);
 
   const server = createServer(app);
 
