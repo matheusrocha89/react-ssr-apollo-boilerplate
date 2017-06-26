@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 require('babel-core/register');
 
 require('./src/server')((app) => {
