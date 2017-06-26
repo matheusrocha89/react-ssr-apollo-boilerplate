@@ -8,6 +8,7 @@ import {
   APP_PORT,
   APP_NAME,
 } from './config';
+import requestHandler from './middlewares/request-handler';
 
 
 const isDevelopment = app => app.get('env') === 'development';
@@ -28,6 +29,8 @@ export default (callback) => {
   } else {
     app.use('/static', express.static(path.join(__dirname, '../../dist')));
   }
+
+  app.use(requestHandler);
 
   server.listen(app.get('port'), () => callback(app));
 };
