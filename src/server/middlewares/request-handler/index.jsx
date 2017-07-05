@@ -13,13 +13,14 @@ import Html from '../../../components/html';
 
 
 function getAssetsMap() {
-  let assets = {};
   if (isDevelopment) {
-    assets = {
-      main: '/bundle.js',
+    return {
+      'main.css': '',
+      'main.js': '/bundle.js',
     };
   }
-  return assets;
+  // eslint-disable-next-line global-require, import/no-unresolved
+  return require('../../../../build/assets-manifest.json');
 }
 
 function requestHandler(req, res) {

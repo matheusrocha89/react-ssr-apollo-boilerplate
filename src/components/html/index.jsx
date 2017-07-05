@@ -10,6 +10,7 @@ function Html({ content, title, assetsMap, state }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href={assetsMap['main.css']} />
         <title>{title}</title>
       </head>
       <body>
@@ -21,7 +22,7 @@ function Html({ content, title, assetsMap, state }) {
           dangerouslySetInnerHTML={{ __html: `window.__APOLLO_STATE__=${JSON.stringify(state)};` }}
           charSet="UTF-8"
         />
-        <script src={assetsMap.main} />
+        <script src={assetsMap['main.js']} />
       </body>
     </html>
   );
