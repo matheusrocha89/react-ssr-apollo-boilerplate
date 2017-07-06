@@ -1,3 +1,7 @@
+/*
+ * This is the same example on Apollo Docs. Credits to them :)
+ */
+
 import {
   createBatchingNetworkInterface,
   createNetworkInterface,
