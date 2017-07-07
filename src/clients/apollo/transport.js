@@ -4,7 +4,7 @@ import { createHybridNetworkInterface } from './http-hybrid-network-interface';
 import { GRAPHQL_URI, GRAPHQL_WITH_BATCH } from '../../server/config';
 
 
-function createNormalNetworkInterface(opts) {
+function createSimpleNetworkInterface(opts) {
   const options = Object.assign({}, {
     uri: GRAPHQL_URI,
   }, opts);
@@ -15,7 +15,7 @@ function createNormalNetworkInterface(opts) {
 function getNormalOrBatchInterface(opts) {
   return GRAPHQL_WITH_BATCH ?
     createHybridNetworkInterface(opts) :
-    createNormalNetworkInterface(opts);
+    createSimpleNetworkInterface(opts);
 }
 
 
