@@ -1,25 +1,22 @@
 import { createNetworkInterface } from 'react-apollo';
 
-import { GRAPHQL_URI } from '../../config';
+import { createHybridNetworkInterface } from './http-hybrid-network-interface';
+import { GRAPHQL_URI, GRAPHQL_WITH_BATCH } from '../../server/config';
 
 
-function getNetworkInterface({ req = {}, interfaceOptions = {}, interfaceMiddlewares = [] }) {
+function createNormalNetworkInterface(opts) {
   const options = Object.assign({}, {
     uri: GRAPHQL_URI,
-    opts: {
-      credentials: 'include',
-      headers: req.headers || {},
-    },
-  }, interfaceOptions);
+  }, opts);
 
-  const networkInterface = createNetworkInterface(options);
+  return createNetworkInterface(options);
+}
 
-  if (interfaceMiddlewares.length > 0) {
-    networkInterface.use(interfaceMiddlewares);
-  }
-
-  return networkInterface;
+function getNormalOrBatchInterface(opts) {
+  return GRAPHQL_WITH_BATCH ?
+    createHybridNetworkInterface(opts) :
+    createNormalNetworkInterface(opts);
 }
 
 
-export default getNetworkInterface;
+export default getNormalOrBatchInterface;
