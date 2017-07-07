@@ -37,6 +37,7 @@
     "webpack-manifest-plugin": "1.1.0"
   },
   "dependencies": {
+    "apollo-client": "1.7.0",
     "babel-core": "6.25.0",
     "babel-polyfill": "6.23.0",
     "express": "4.15.3",
