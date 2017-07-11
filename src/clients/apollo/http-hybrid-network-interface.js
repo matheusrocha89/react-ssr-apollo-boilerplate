@@ -6,13 +6,23 @@ import {
   createBatchingNetworkInterface,
   createNetworkInterface,
 } from 'apollo-client';
+import { merge } from 'lodash';
+
+import { GRAPHQL_URI } from '../../server/config';
 
 
 class HTTPHybridNetworkInterface {
 
-  constructor(opts) {
-    this.batchedInterface = createBatchingNetworkInterface(opts);
-    this.networkInterface = createNetworkInterface(opts);
+  constructor(opts = {}, headers = {}) {
+    const richerOpts = merge({}, {
+      uri: GRAPHQL_URI,
+      opts: {
+        headers,
+      },
+    }, opts);
+
+    this.batchedInterface = createBatchingNetworkInterface(richerOpts);
+    this.networkInterface = createNetworkInterface(richerOpts);
   }
 
   query(request) {
@@ -37,8 +47,8 @@ class HTTPHybridNetworkInterface {
   }
 }
 
-function createHybridNetworkInterface(opts) {
-  return new HTTPHybridNetworkInterface(opts);
+function createHybridNetworkInterface(opts = {}, headers = {}) {
+  return new HTTPHybridNetworkInterface(opts, headers);
 }
 
 export default {

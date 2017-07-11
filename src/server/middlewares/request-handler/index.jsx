@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { ApolloProvider, renderToStringWithData } from 'react-apollo';
 import mobile from 'is-mobile';
 
-import { createApolloClient, getNetworkInterface } from '../../../clients/apollo';
+import { createApolloClient, getNormalOrBatchInterface } from '../../../clients/apollo';
 import { isDevelopment } from '../../config';
 import App from '../../../components/app';
 import Html from '../../../components/html';
@@ -28,7 +28,10 @@ function requestHandler(req, res) {
   const clientOptions = {
     ssrMode: true,
   };
-  const networkInterface = getNetworkInterface({ req });
+  const networkInterface = getNormalOrBatchInterface(
+    clientOptions,
+    req.headers,
+  );
   const apolloClient = createApolloClient({
     req,
     clientOptions,
