@@ -1,8 +1,8 @@
 import createApolloClient from './client';
-import getNetworkInterface from './transport';
+import getNormalOrBatchInterface from './transport';
 
 
 export default {
   createApolloClient,
-  getNetworkInterface,
+  getNormalOrBatchInterface,
 };
